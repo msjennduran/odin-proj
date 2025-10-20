@@ -1,0 +1,135 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+
+
+.header-container, .footer, .hero-container {
+    display: flex;
+  padding: 15px 50px;
+
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding-bottom: 5em;
+}
+
+.body-container > div {
+    padding: 5em 8em;
+}
+
+.header-container {
+    justify-content: space-around;
+}
+.header-links{
+    display: flex;
+    gap: 1.5em;
+}
+
+.header, .button-container > div:first-child {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.hero-main{
+    font-size: 48px;
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+.hero-container {
+    gap: 50px ;
+    justify-content: center;
+}
+.hero-container div {
+    width: 500px;
+    flex-shrink: 0;
+}
+.image-container {
+    background-color: grey;
+    align-content: center;
+        justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.box-area{
+    display: flex;
+  flex-direction: column;
+}
+.box-area div  {
+    margin: auto;
+    
+}
+.box{
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid #3882F6;
+}
+
+.hero-sec{
+    font-size: 18px;
+    color: #E7E7EB;
+}
+
+.quote-container{
+    background-color: #E7E7EB;
+}
+
+.quote {
+   font-size: 36px;
+  color: #1F2937;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.action-container, .button {
+    background-color: #3882F6;
+  border: 0;
+  padding: .5em 2em;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 12px;
+  margin-top: .5em;
+}
+
+.card-container {
+    display: flex;
+    gap: 15px;
+}
+
+.footer {
+    justify-content: center;
+}
+
+.box-area > div:first-child {
+    font-size: 2em;
+    font-weight: 800;
+    padding-bottom: 2em;
+}
+
+.quote-author{
+    color: #1F2937;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.card {
+    width: 155px;
+    text-align: center;
+}
+
+.action-container {
+    margin: 5em 8em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-container > button {
+    border: 2px solid;
+    font-weight: 600;
+}
