@@ -1,4 +1,4 @@
-console.log("Hi from in rock paper scissor");
+
 
 function getComputerChoice(){
     let randomNum = Math.random();
@@ -12,32 +12,19 @@ function getComputerChoice(){
 }
 const playGame = document.querySelector("#playGame");
 const log = document.querySelector("#score");
+const gameContainer = document.querySelector('#btn-container');
 
 let scoreHuman = 0;
 let scoreComp = 0;
 
 playGame.addEventListener('click', () => {
-    playRound();
+     log.innerHTML = '';
+    gameContainer.classList.toggle('hidden');
+    playGame.classList.add('hidden');
 });
 
-function playRound(){
-    let round = 1;
-    do{
-    let humanChoice = prompt('Rock, Paper, or Scissor?');
-        
-    if(humanChoice == "Rock"){
-        console.log('you choose rock');
-    }else if(humanChoice == "Paper"){
-        console.log('you choose paper');
-    } else if(humanChoice == "Scissor"){
-        console.log('you choose scissor');
-    }
-
+function playRound( humanChoice){
     updateScore(humanChoice.toLowerCase());
-    round++;
-    }
-    while(round <= 5)
-   
 }
 
 function updateScore(humanChoice){
@@ -46,6 +33,7 @@ function updateScore(humanChoice){
     if(humanChoice == 'rock'){
         switch(compChoice){
             case 'rock':
+                scoreHuman++;
                 break;
             case 'paper':
                 scoreComp++;
@@ -63,6 +51,7 @@ function updateScore(humanChoice){
                 scoreHuman++;
                 break;
             default:
+                scoreHuman++;
                 break
         }
     } else {
@@ -71,6 +60,7 @@ function updateScore(humanChoice){
                 scoreHuman++;
                 break;
             case 'paper':
+                scoreHuman++;
                 break;
             default:
                 scoreComp++;
@@ -78,6 +68,27 @@ function updateScore(humanChoice){
         }
     }
 
-    log.innerHTML="Computer: " + scoreComp + " You: " + scoreHuman + '';
+    log.innerHTML="Computer: " + scoreComp + " You: " + scoreHuman + '.' + (scoreComp >= 5 ? 'Computer has won.' : 
+                            (scoreHuman >= 5 ? 'You have won!' : ''));
+
+    if(scoreHuman >= 5 || scoreComp >= 5){
+        scoreHuman = 0;
+        scoreComp = 0;
+        gameContainer.classList.toggle('hidden');
+        playGame.innerHTML= 'Play Again';
+        playGame.classList.remove('hidden');
+    }
 }
 
+const rockButton = document.querySelector('#rockBtn');
+const paperButton = document.querySelector('#paperBtn');
+const scissorButton = document.querySelector('#scissorBtn');
+rockButton.addEventListener('click', ()=>{
+    playRound('Rock');
+});
+paperButton.addEventListener('click', ()=>{
+    playRound('Paper');
+});
+scissorButton.addEventListener('click', ()=>{
+    playRound('Scissor');
+});

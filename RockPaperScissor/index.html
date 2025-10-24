@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <button id='playGame'> Play Game</button>
+    <div id='btn-container' class='hidden'>
+        <button id='rockBtn'>Rock</button>
+        <button id='paperBtn'>Paper</button>
+        <button id='scissorBtn'>Scissor</button>
+    </div>
+
     <pre id='log'></pre>
     <div id='score'></div>
     <script src='./rockpaperscissor.js'></script>
