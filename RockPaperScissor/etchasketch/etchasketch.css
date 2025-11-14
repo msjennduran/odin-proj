@@ -1,3 +1,21 @@
-.div[class^='grid-']{
-    border: 1px solid red;
+#grid-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div[class*='grid-']{
+  border: 1px solid red;
+  height: 100px;
+  width: 100px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+div[class*='grid-']:hover{
+    background-color: gray;
+}
+
+button{
+    padding: .5em;
+    margin: 1em;
 }

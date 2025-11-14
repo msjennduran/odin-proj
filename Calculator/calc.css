@@ -1,0 +1,36 @@
+#calc-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+#calc-display{
+    padding: 5px;
+    border: 1px solid grey;
+    width: 350px;
+    height: 50px;
+    text-align: right;
+    margin-bottom: .5em;
+    align-content: end;
+}
+
+#button-container{
+    display:flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    width: 350px;
+    text-align: center;
+}
+
+#button-container .btn{
+    padding: 5px;
+    border: 1px solid grey;
+    flex-shrink: 0;
+    height: 100px;
+    width: 100px;
+    align-content: center;
+}
+
+.btn-clear{
+    flex:2;
+}
