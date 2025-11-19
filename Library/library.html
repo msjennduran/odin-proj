@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href='./library.css' rel='stylesheet' />
+</head>
+<body>
+    <div class='bot-padd'>
+        <span class='heading'>My Library</span> 
+        <span class='add-button'>+ add book</span>
+    </div>
+    <div class='library'>
+
+    </div>
+
+    <div class='modal'>
+        <div class='modal-head'>Add A Book</div>
+        <div class='content'>
+            <label for='book-title'>
+                Title
+            </label>
+            <input type='text' id='book-title' />
+            
+            <label for='book-author'>
+                Author
+            </label>
+            <input type='text' id='book-author'/>
+
+            <label for='book-pages'>Pages</label>
+            <input type='number' id='book-pages' />
+
+            <label for='book-read'><input type='checkbox' id='book-read'></checkbox> Read</label>
+            <button id='add-book-btn'>Add Book</button>
+        </div>
+    </div>
+
+    <script src='./library.js'></script>
+</body>
+</html>

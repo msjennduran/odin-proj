@@ -1,0 +1,26 @@
+.library{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.bot-padd{
+    padding-bottom: 1.5rem;
+}
+
+.heading{
+    font-size: 1.5rem;
+}
+
+.book-card{
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+div[class^='title']{
+    font-size: 1.3rem;
+}
+
+.modal{
+    display: none;
+}
